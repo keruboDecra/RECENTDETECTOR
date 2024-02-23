@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Cyberbullying Detector",
+  "version": "1.0",
+  "permissions": ["activeTab", "storage", "contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "logo.png"
+  },
+  "action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  }
+}
